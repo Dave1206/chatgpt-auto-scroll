@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Auto-Scroll",
+  "version": "1.0.0",
+  "description": "Keeps ChatGPT chats auto-scrolling to the bottom while responses stream. Simple on/off toggle.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "chatgpt-auto-scroll",
+  "private": true,
+  "scripts": {
+    "pack": "bash package.sh"
+  }
+}
