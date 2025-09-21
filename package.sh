@@ -1,15 +1,17 @@
-#!/usr/bin/env bash
 set -euo pipefail
 
-ver=$(grep -oP '"version"\s*:\s*"\K[^"]+' manifest.json)
-name="chatgpt-auto-scroll"
-zipname="${name}-v${ver}.zip"
+NAME="chatgpt-auto-scroll"
+MANIFEST="manifest.json"
+ICONS_DIR="icons"
 
+ver=$(grep -oP '"version"\s*:\s*"\K[^"]+' "$MANIFEST")
+zipname="${NAME}-v${ver}.zip"
 rm -f "$zipname"
+
 zip -r "$zipname" \
   manifest.json \
   content.js \
-  icons \
+  "$ICONS_DIR" \
   README.md \
   CHANGELOG.md \
   LICENSE \
