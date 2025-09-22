@@ -7,9 +7,12 @@
     "bump:minor": "node scripts/bump.mjs minor",
     "bump:major": "node scripts/bump.mjs major",
     "bump:none":  "node scripts/bump.mjs none",
+
     "pack": "npm run bump:patch && bash package.sh",
     "pack:minor": "npm run bump:minor && bash package.sh",
     "pack:major": "npm run bump:major && bash package.sh",
-    "pack:none": "npm run bump:none && bash package.sh"
+    "pack:none": "npm run bump:none && bash package.sh",
+    
+    "pack:ps": "npm run bump:patch && pwsh -File ./package.ps1"
   }
 }
